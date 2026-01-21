@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Minesweeper.Domain.Cells
 {
-    internal class MineCell
+    public class MineCell: AbstractCell
     {
+        public MineCell(Position pos): base(pos) { }
+
+        public override bool IsMine => true;
+
     }
 }
